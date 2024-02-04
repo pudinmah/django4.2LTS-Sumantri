@@ -1,18 +1,18 @@
-from django.http import HttpResponse
 
 from django.contrib import admin
 from django.urls import path
 
 
-def index(request):
-    return HttpResponse("Halo, Dunia Django Framework")
-
-def blog(request):
-    return HttpResponse("<h1>Ini adalah halaman blog</h1>")
-
+# from . views import index, blog #import function di file view
+# from . import views
+from . views import *
 
 urlpatterns = [
-    path('', index),
+    # path('', views.index),  # from . import views
+    # path('blog/', views.blog),
+
+    path('', index),  
     path('blog/', blog),
+    
     path('admin/', admin.site.urls),
 ]
