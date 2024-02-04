@@ -10,7 +10,7 @@ source env/bin/activate  # On Windows use `env\Scripts\activate`
 
 # Install Django and Django REST framework into the virtual environment
 pip list
-pip install django
+pip install django or pip install Django==5.0.1
 pip install djangorestframework
 
 # Set up a new project with a single application

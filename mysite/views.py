@@ -1,11 +1,8 @@
 from django.http import HttpResponse
+from django.shortcuts import render
 
 def index(request):
-    str = "halo sayang"
-    str1 = "sayang2 pea"
-    str2 = "galak amat"
-    output = str +" "+ str1 +" "+ str2
-    return HttpResponse(output)
+    return render(request, 'index.html')
 
-def blog(request):
+def about(request):
     return HttpResponse("<h1>Ini adalah halaman blog</h1>")
