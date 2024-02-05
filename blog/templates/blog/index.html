@@ -1,20 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{title}} | Mahpudin</title>
-</head>
-<body>
-    <h1>Welcome in {{title}}</h1>
-    <h3>Developer:{{developer}} </h3>
+{% extends "bash.html" %}
+{% block content %}
 
-    <ul>
-        <li><a href="/">Home</a></li>
-        <ul>
-            <li><a href="/blog/artikel">Artikel</a></li>
-            <li><a href="/blog/berita">Berita</a></li>
-        </ul>
-    </ul>
-</body>
-</html>
+<h1>Selamat datang di {{title}} </h1>
+<span>Developer :{{developer}} </span>
+{% include "blog/snippets/navbar.html" %}
+{% endblock content %}

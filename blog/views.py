@@ -4,22 +4,55 @@ from django.shortcuts import render
 
 def index(request):
     context = {
-    'title': 'blog bersama',
-    'developer': 'mahpudn'
+        'title': 'blog',
+        'developer':'ucup',
+        'nav':[
+            ['/','Home'],
+            ['/blog','Blog'],
+            ['/blog/artikel','Artikel'],
+            ['/blog/berita','Berita'],
+        ]
     }
-    return render(request, 'blog/index.html', context) # panggil folder blog/index di app blog
+    return render(request, 'blog/index.html', context)
+
+def blog(request):
+    context = {
+        'title': 'blog',
+        'developer':'eko',
+        'nav':[
+            ['/','Home'],
+            ['/blog','Blog'],
+            ['/blog/artikel','Artikel'],
+            ['/blog/berita','Berita'],
+        ]
+    }
+
+    return render(request, 'blog/index.html', context)
 
 def artikel(request):
     context = {
-    'title': 'blog Artikel',
-    'developer': 'wahyu'
+        'title': 'artikel',
+        'developer':'agung',
+        'nav':[
+            ['/','Home'],
+            ['/blog','Blog'],
+            ['/blog/artikel','Artikel'],
+            ['/blog/berita','Berita'],
+        ]
     }
-    return render(request, 'blog/index.html', context) # panggil folder blog/index di app blog
+
+    return render(request, 'blog/index.html', context)
 
 def berita(request):
     context = {
-    'title': 'blog Berita',
-    'developer': 'ucup'
+        'title': 'berita',
+        'developer':'budi',
+        'nav':[
+            ['/','Home'],
+            ['/blog','Blog'],
+            ['/blog/artikel','Artikel'],
+            ['/blog/berita','Berita'],
+        ]
     }
-    return render(request, 'blog/index.html', context) # panggil folder blog/index di app blog
 
+    return render(request, 'blog/index.html', context)

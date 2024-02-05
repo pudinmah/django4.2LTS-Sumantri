@@ -1,11 +1,11 @@
 from django.shortcuts import render
 
 
+# Create your views project here.
 
-# file viwes project
 def index(request):
     context = {
-        'title':'web development fullstack',
-        'developer':'pudin',
+        'title':'mywebsite',
+        'developer':'Mahpudin'
     }
-    return render(request, 'index.html', context)
+    return render(request,'index.html',context)
