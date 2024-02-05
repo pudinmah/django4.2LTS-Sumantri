@@ -4,4 +4,8 @@ from django.shortcuts import render
 
 # file viwes project
 def index(request):
-    return render(request, 'index.html')
+    context = {
+        'title':'web development fullstack',
+        'developer':'pudin',
+    }
+    return render(request, 'index.html', context)
