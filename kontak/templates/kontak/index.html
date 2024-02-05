@@ -7,12 +7,13 @@
 
 {% block content %}
 <img src="{% static banner %}" alt="">
+
 <ul>
 
     {% for link, name in nav %}
     <li><a href="{{link}}">{{name}} </a></li>
     {% endfor %}
 </ul>
-    
+
 <h2>{{subtitle}} </h2>
 {% endblock content %}

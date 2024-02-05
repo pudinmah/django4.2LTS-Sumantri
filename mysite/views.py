@@ -1,11 +1,13 @@
 from django.shortcuts import render
 
 
-# Create your views project here.
 
+# project
 def index(request):
     context = {
-        'title':'mywebsite',
-        'developer':'Mahpudin'
+        'title':'portopolio',
+        'subtitle':'Ini adalah fortopolio saya',
+        
+        'banner':'images/beranda.png'
     }
-    return render(request,'index.html',context)
+    return render(request, 'index.html',context)

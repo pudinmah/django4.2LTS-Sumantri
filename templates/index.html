@@ -1,7 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head_title %}
+{{title}}
+{% endblock head_title %}
+
 {% block content %}
-<h1>Selamat datang di {{title}} </h1>
-<span>Developer :{{developer}} </span>
+<img src="{% static banner %}" alt="banner" width="100%">
 
-{% include 'snippets/navbar.html' %}
+<ul>
 
+    {% for link, name in nav %}
+    <li><a href="{{link}}">{{name}} </a></li>
+    {% endfor %}
+</ul>
+    
+<h2>{{subtitle}} </h2>
 {% endblock content %}
