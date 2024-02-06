@@ -1,14 +1,21 @@
 from django.shortcuts import render
 
-
-
-# project
 def index(request):
     context = {
         'title':'portopolio',
-        'subtitle':'Jika saya mencoba yang terbaik dan gagal, setidaknya saya telah melakukan yang terbaik.',
-        
-        'name':'Mahpudin',
-        'jobs':'Web Developer',
+        'subtitle':'selamat datang di channel ini good peoples, terima kasih sudah subscribe!',
+        'banner':'images/beranda.png',
     }
-    return render(request, 'index.html',context)
+    return render(request, 'index.html', context)
+
+def login(request):
+    context = {
+        'title':'login'
+    }
+    return render(request, 'login.html',context)
+
+def daftar(request):
+    context = {
+        'title':'Daftar',
+    }
+    return render(request, 'daftar.html',context)

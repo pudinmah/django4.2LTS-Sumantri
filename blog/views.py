@@ -1,13 +1,14 @@
 from django.shortcuts import render
 
 # Create your views here.
-
 def index(request):
     context = {
-        'title':'blog',
-        'subtitle':'ini adalah halaman blog',
-        'banner':'blog/images/blog.png',
-        'css_apps':'blog/css/css_blog.css',
-        
+        'title':'Blog',
     }
-    return render(request, 'index.html',context)
+    return render(request, 'blog/index.html', context)
+
+def detail_blog(request):
+    context = {
+        'title':'Detail Blog',
+    }
+    return render(request, 'blog/detail_blog.html', context)
