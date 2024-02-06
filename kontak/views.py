@@ -5,6 +5,7 @@ def index(request):
     context = {
         'title':'kontak',
         'subtitle':'ini adalah kontak hubungi kami',
-        'banner':'/kontak/images/beranda.png'
+        'banner':'/kontak/images/kontak.png',
+        'css_apps':'kontak/css/css_kontak.css',
     }
     return render(request,'index.html',context)

@@ -5,14 +5,6 @@
 {% endblock head_title %}
 
 {% block content %}
-<img src="{% static banner %}" alt="banner" width="100%">
-
-<ul>
-
-    {% for link, name in nav %}
-    <li><a href="{{link}}">{{name}} </a></li>
-    {% endfor %}
-</ul>
-    
+<img id="banner" src="{% static banner %}" alt="banner"">
 <h2>{{subtitle}} </h2>
 {% endblock content %}
