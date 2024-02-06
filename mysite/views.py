@@ -6,8 +6,9 @@ from django.shortcuts import render
 def index(request):
     context = {
         'title':'portopolio',
-        'subtitle':'Ini adalah fortopolio saya',
+        'subtitle':'Jika saya mencoba yang terbaik dan gagal, setidaknya saya telah melakukan yang terbaik.',
         
-        'banner':'images/beranda.png'
+        'name':'Mahpudin',
+        'jobs':'Web Developer',
     }
     return render(request, 'index.html',context)
